@@ -47,10 +47,10 @@ class Person {
         title = scanner.nextLine();
 
         // Genre setting
-        System.out.println("Choose a genre:\n1. Adventure\n2. Classic\n3. Comics\n4. Detective\n5. Fantasy\n6. Fiction\n >> ");
+        System.out.print("Choose a genre:\n1. Adventure\n2. Classic\n3. Comics\n4. Detective\n5. Fantasy\n6. Fiction\n >> ");
         choice = scanner.nextInt();
         while(choice < 1 || choice > 6) {
-            System.out.println("Error. No such option has been found.\nChoose a genre:\n1. Adventure\n2. Classic\n3. Comics\n4. Detective\n5. Fantasy\n6. Fiction\n >> ");
+            System.out.print("Error. No such option has been found.\nChoose a genre:\n1. Adventure\n2. Classic\n3. Comics\n4. Detective\n5. Fantasy\n6. Fiction\n >> ");
             choice = scanner.nextInt();
         }
 
@@ -71,10 +71,10 @@ class Person {
                 break;
         }
         
-        System.out.println("Choose a language:\n1. English\n2. Polish\n3. Japanese\n4. Ukrainian\n >> ");
+        System.out.print("Choose a language:\n1. English\n2. Polish\n3. Japanese\n4. Ukrainian\n >> ");
         choice = scanner.nextInt();
         while(choice < 1 || choice > 4) {
-            System.out.println("Error. No such option has been found.\nChoose a genre:\n1. English\n2. Polish\n3. Japanese\n4. Ukrainian\n >> ");
+            System.out.print("Error. No such option has been found.\nChoose a genre:\n1. English\n2. Polish\n3. Japanese\n4. Ukrainian\n >> ");
             choice = scanner.nextInt();
         }
 
@@ -90,7 +90,7 @@ class Person {
             default: System.out.println("An error occurred."); System.exit(-1);
                 break;
         }
-        scanner.close();
+     //   scanner.close();
         return new Book(title, this.surname + " " + this.name, genre, language, LocalDate.now(ZoneId.systemDefault()));
     }
 
